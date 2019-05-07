@@ -37,5 +37,7 @@ TUTORIAL 4
 	(e.g.) http -a admin:password123 POST http://127.0.0.1:8000/snippets/ 			code="print(789)"
 
 TUTORIAL 5
-- Create endpoint for the root of API
+- Create endpoint for the root of API and highlighted snippets
 	- use @api_view to get regular function-based view
+	- create own GET method for highlighted snippets
+-
