@@ -25,3 +25,8 @@ TUTORIAL 2:
 TUTORIAL 3
 - Write API using class-based
 - Mixins
+- Generic Class-Based (Shortest, Include Mixin-Classes)
+
+TUTORIAL 4 
+-Authentication & Permission
+-
