@@ -15,11 +15,11 @@ TUTORIAL 2:
 - Wrapping API:
 	- @api_view for function based views
 		- to view by format: (e.g.) http http://127.0.0.1:8000/snippets.api OR 
-		http://127.0.0.1:8000/snippets/ Accept:text/html [HTML version, from 			Terminal]
+http://127.0.0.1:8000/snippets/ Accept:text/html [HTML version, from Terminal]
 	- APIView for class-based views
 - Request format using Content-Type header
-	- POST using form data: http --form POST http://127.0.0.1:8000/snippets/ 		code="print(123)"
-	- POST using JSON: http --json POST http://127.0.0.1:8000/snippets/ 			code="print(456)"
+	- POST using form data: http --form POST http://127.0.0.1:8000/snippets/code="print(123)"
+	- POST using JSON: http --json POST http://127.0.0.1:8000/snippets/code="print(456)"
 - Default Browse: HTML-formatted
 
 TUTORIAL 3
@@ -34,7 +34,7 @@ TUTORIAL 4
 - Link Snippets with user
 - Set up permission to view
 - Authenticating with API
-	(e.g.) http -a admin:password123 POST http://127.0.0.1:8000/snippets/ 			code="print(789)"
+	(e.g.) http -a admin:password123 POST http://127.0.0.1:8000/snippets/code="print(789)"
 
 TUTORIAL 5
 - Create endpoint for the root of API and highlighted snippets
@@ -54,5 +54,8 @@ TUTORIAL 6
 - ViewSets can minimise the codes needed so that one can focus on interactions and representations of API but less explicit compared to views
 
 TUTORIAL 7
-
+- Core API:
+	- Server-side: API able to support rendering to a wide range of schema or hypermedia formats
+	- Client-side: Allows dynamically driven client libraries that can interact to API the exposes a supported schema or hypermedia format.
+- Automatic Schema Generation
 
