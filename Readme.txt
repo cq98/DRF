@@ -50,5 +50,5 @@ TUTORIAL 6
 	- Replace User list and details into User viewsets
 	- Replace Snippet list, highlight and details into Snippet viewsets
 - Bind ViewSets into URLs
-- 
+- Routers
 
