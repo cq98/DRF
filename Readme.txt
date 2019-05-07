@@ -46,6 +46,9 @@ TUTORIAL 5
 - Add Pagination
 
 TUTORIAL 6
-- ViewSets & Routers
-
+- ViewSets
+	- Replace User list and details into User viewsets
+	- Replace Snippet list, highlight and details into Snippet viewsets
+- Bind ViewSets into URLs
+- 
 
