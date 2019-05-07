@@ -34,3 +34,6 @@ TUTORIAL 4
 - Link Snippets with user
 - Set up permission to view
 - Authenticating with API
+
+TUTORIAL 5
+- 
