@@ -40,4 +40,6 @@ TUTORIAL 5
 - Create endpoint for the root of API and highlighted snippets
 	- use @api_view to get regular function-based view
 	- create own GET method for highlighted snippets
--
+- Hyperlink API
+	- Change the serialisers from Model to Hyperlinked
+
