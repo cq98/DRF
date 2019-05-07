@@ -58,4 +58,7 @@ TUTORIAL 7
 	- Server-side: API able to support rendering to a wide range of schema or hypermedia formats
 	- Client-side: Allows dynamically driven client libraries that can interact to API the exposes a supported schema or hypermedia format.
 - Automatic Schema Generation
+- Command line Client [Coreapi -cli]
+- Authenticate Client
+
 
