@@ -28,5 +28,8 @@ TUTORIAL 3
 - Generic Class-Based (Shortest, Include Mixin-Classes)
 
 TUTORIAL 4 
--Authentication & Permission
--
+- Authentication & Permission
+- Create User
+- Add endpoints for User (model, serializer and urls)
+- Link Snippets with user
+- Permission to view
