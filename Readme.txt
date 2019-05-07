@@ -32,4 +32,5 @@ TUTORIAL 4
 - Create User
 - Add endpoints for User (model, serializer and urls)
 - Link Snippets with user
-- Permission to view
+- Set up permission to view
+- Authenticating with API
