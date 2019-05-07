@@ -23,3 +23,5 @@ TUTORIAL 2:
 - Default Browse: HTML-formatted
 
 TUTORIAL 3
+- Write API using class-based
+- Mixins
