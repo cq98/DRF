@@ -42,4 +42,7 @@ TUTORIAL 5
 	- create own GET method for highlighted snippets
 - Hyperlink API
 	- Change the serialisers from Model to Hyperlinked
+- Finalise URL patterns
+- Add Pagination
+
 
