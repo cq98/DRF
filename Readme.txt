@@ -45,4 +45,7 @@ TUTORIAL 5
 - Finalise URL patterns
 - Add Pagination
 
+TUTORIAL 6
+- ViewSets & Routers
+
 
