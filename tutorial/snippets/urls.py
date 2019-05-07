@@ -33,6 +33,7 @@ urlpatterns = format_suffix_patterns([
     path('snippets/<int:pk>/highlight/', snippet_highlight, name='snippet-highlight'),
     path('users/', user_list, name='user-list'),
     path('users/<int:pk>/', user_detail, name='user-detail')
+    
 ])
 
 # Create a router and register our viewsets with it.
@@ -41,14 +42,9 @@ router.register(r'snippets', views.SnippetViewSet)
 router.register(r'users', views.UserViewSet)
 
 # The API URLs are now determined automatically by the router.
+schema_view = get_schema_view(title='Pastebin API')
 urlpatterns = [
     path('', include(router.urls)),
-]
-
-
-schema_view = get_schema_view(title='Pastebin API')
-
-urlpatterns = [
     path('schema/', schema_view),
-    ...
 ]
+
