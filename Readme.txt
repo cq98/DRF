@@ -21,3 +21,5 @@ TUTORIAL 2:
 	- POST using form data: http --form POST http://127.0.0.1:8000/snippets/ 		code="print(123)"
 	- POST using JSON: http --json POST http://127.0.0.1:8000/snippets/ 			code="print(456)"
 - Default Browse: HTML-formatted
+
+TUTORIAL 3
