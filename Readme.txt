@@ -51,4 +51,8 @@ TUTORIAL 6
 	- Replace Snippet list, highlight and details into Snippet viewsets
 - Bind ViewSets into URLs
 - Routers
+- ViewSets can minimise the codes needed so that one can focus on interactions and representations of API but less explicit compared to views
+
+TUTORIAL 7
+
 
