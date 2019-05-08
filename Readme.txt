@@ -1,8 +1,18 @@
 TUTORIAL 1:
 - Initialise the set up
 - Create Model:
-	- Edit snippets/models.py to create snippet class
+	- Edit snippets/models.py to create snippet class which will store code snippets
+	- Inner Class Meta (optional) can determine the ordering of the output printed and set plural form of the words
 - Create Serializer
+	- Serializer: Convert complex datas into native Python datatypes
+		- Inside Class SnippetSerializer, two functions: Create and Update. When validated data are given,
+			- Create: create and return new Snippet
+			- Update: Update and return existing Snippet
+		When serializer is saved, the two functions will be implemented.
+		- Set snippet = Snippet(parameters/inputs) to create code snippets
+		- Set serializer = SnippetSerializer(snippet) to initialise the datas and apply JSONRenderer to convert the datas into native Python datatypes
+
+	- Deserializer: Convert native Python datatypes into complex datas
 - Create ModelSerializer(AUTO)
 - Writing Regular Django Views using Serializer [JSON]
 	- to view by format: (e.g.) http://127.0.0.1:8000/snippets.json OR 
