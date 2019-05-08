@@ -33,7 +33,8 @@ TUTORIAL 1:
 			- HttpResponse(status = 204) : No Content (i.e. shown after snippet has been deleted)
 	- to view by format: (e.g.) http://127.0.0.1:8000/snippets.json OR 
 	http http://127.0.0.1:8000/snippets/ Accept:application/json [Terminal]
-
+- Create snippets/urls.py to wire the views and edit tutorial/urls.py to include snippet app's URLs (wire up the root urlconf)
+	- If not, there may be 500 Internal Server Error
 TUTORIAL 2:
 - Request objects:
 	- request.POST #for form data, 'POST' Method only
