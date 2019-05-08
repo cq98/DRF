@@ -35,6 +35,7 @@ TUTORIAL 1:
 	http http://127.0.0.1:8000/snippets/ Accept:application/json [Terminal]
 - Create snippets/urls.py to wire the views and edit tutorial/urls.py to include snippet app's URLs (wire up the root urlconf)
 	- If not, there may be 500 Internal Server Error
+
 TUTORIAL 2:
 - Request objects:
 	- request.POST #for form data, 'POST' Method only
@@ -45,7 +46,15 @@ TUTORIAL 2:
 - Wrapping API:
 	- @api_view for function based views
 		- to view by format: (e.g.) http http://127.0.0.1:8000/snippets.api OR 
-http://127.0.0.1:8000/snippets/ Accept:text/html [HTML version, from Terminal]
+		http://127.0.0.1:8000/snippets/ Accept:text/html [HTML version, from Terminal]
+		- Similar to JSON, 
+			- GET/ PUT (if data is valid)
+			return Response(serializer.data)
+			- POST:
+				- Successful Creation: Response(serializer.data, status=status.HTTP_201_CREATED)
+				- Invalid data and cannot create new snippets: Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+			- DELETE: 
+				- Succesfful Deletion: Response(status=status.HTTP_204_NO_CONTENT)
 	- APIView for class-based views
 - Request format using Content-Type header
 	- POST using form data: http --form POST http://127.0.0.1:8000/snippets/code="print(123)"
