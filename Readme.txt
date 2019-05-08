@@ -11,10 +11,26 @@ TUTORIAL 1:
 		When serializer is saved, the two functions will be implemented.
 		- Set snippet = Snippet(parameters/inputs) to create code snippets
 		- Set serializer = SnippetSerializer(snippet) to initialise the datas and apply JSONRenderer to convert the datas into native Python datatypes
-
 	- Deserializer: Convert native Python datatypes into complex datas
+		- JSONParser read the data from web. So, parse a stream into the native Python dataypes and then use the same method serializer = SnippetSerializer(parsedstreamdata) to convert the native datatypes back into fully populated object instances
 - Create ModelSerializer(AUTO)
+	- Contains common in-built serializers fields
 - Writing Regular Django Views using Serializer [JSON]
+	- List of Snippets:
+		- To GET the snippts:
+			- Return all the snippets available, run through serializer to get the correct datatypes wanted
+		- To POST the snippets:
+			- Given valid datas, JsonResponse(serializer.data, status = 201) : Created new snippet successfully
+			- JsonResponse(serializer.errors, status = 400) : Bad Request from client side, data input is not valid
+	- Individual Snippets
+		- To GET the snippets:
+			- run through the database of snippets and return the requested snippets
+			- HttpResponse(status = 400) : Page not found/ Server not found (i.e. non-existent snippets)
+		- To PUT the snippets:
+			- If the data input is valid, the data will be updated into snippet/serializer database and return updated datas.
+			- JsonResponse(serializer.errors, status = 400) : Bad Request from client side, data input is not valid
+		- To DELETE the snippets:
+			- HttpResponse(status = 204) : No Content (i.e. shown after snippet has been deleted)
 	- to view by format: (e.g.) http://127.0.0.1:8000/snippets.json OR 
 	http http://127.0.0.1:8000/snippets/ Accept:application/json [Terminal]
 
