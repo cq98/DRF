@@ -19,18 +19,23 @@ TUTORIAL 1:
 	- List of Snippets:
 		- To GET the snippts:
 			- Return all the snippets available, run through serializer to get the correct datatypes wanted
+			- http GET http://127.0.0.1:8000/snippets/
 		- To POST the snippets:
 			- Given valid datas, JsonResponse(serializer.data, status = 201) : Created new snippet successfully
 			- JsonResponse(serializer.errors, status = 400) : Bad Request from client side, data input is not valid
+			- http POST http://127.0.0.1:8000/snippets/ code="TEXT"
 	- Individual Snippets
 		- To GET the snippets:
 			- run through the database of snippets and return the requested snippets
-			- HttpResponse(status = 400) : Page not found/ Server not found (i.e. non-existent snippets)
+			- HttpResponse(status = 404) : Page not found/ Server not found (i.e. non-existent snippets)
+			- http GET http://127.0.0.1:8000/snippets/1/
 		- To PUT the snippets:
 			- If the data input is valid, the data will be updated into snippet/serializer database and return updated datas.
 			- JsonResponse(serializer.errors, status = 400) : Bad Request from client side, data input is not valid
+			- http PUT http://127.0.0.1:8000/snippets/1/ code="HI"/
 		- To DELETE the snippets:
 			- HttpResponse(status = 204) : No Content (i.e. shown after snippet has been deleted)
+			- http DELETE http://127.0.0.1:8000/snippets/1/
 	- to view by format: (e.g.) http://127.0.0.1:8000/snippets.json OR 
 	http http://127.0.0.1:8000/snippets/ Accept:application/json [Terminal]
 - Create snippets/urls.py to wire the views and edit tutorial/urls.py to include snippet app's URLs (wire up the root urlconf)
@@ -50,12 +55,15 @@ TUTORIAL 2:
 		- Similar to JSON, 
 			- GET/ PUT (if data is valid)
 			return Response(serializer.data)
+			- http GET http://127.0.0.1:8000/snippets.api
 			- POST:
 				- Successful Creation: Response(serializer.data, status=status.HTTP_201_CREATED)
 				- Invalid data and cannot create new snippets: Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+				- http POST http://127.0.0.1:8000/snippets.api
 			- DELETE: 
 				- Succesfful Deletion: Response(status=status.HTTP_204_NO_CONTENT)
 	- APIView for class-based views
+		- Change into function, not if-else condition
 - Request format using Content-Type header
 	- POST using form data: http --form POST http://127.0.0.1:8000/snippets/code="print(123)"
 	- POST using JSON: http --json POST http://127.0.0.1:8000/snippets/code="print(456)"
@@ -73,7 +81,12 @@ TUTORIAL 4
 - Link Snippets with user
 - Set up permission to view
 - Authenticating with API
+	(e.g.) http -a admin:password123 GET http://127.0.0.1:8000/snippets/ 
 	(e.g.) http -a admin:password123 POST http://127.0.0.1:8000/snippets/code="print(789)"
+	(e.g.) http -a admin:password123 DELETE http://127.0.0.1:8000/snippets/2/
+	(e.g.) http -a admin:password123 PATCH http://127.0.0.1:8000/snippets/3/
+
+
 
 TUTORIAL 5
 - Create endpoint for the root of API and highlighted snippets
